@@ -771,7 +771,6 @@ note.setForeground(Color.RED);
 //         public  void databaseConn(){
 //             try{
 //         Class.forName("com.mysql.jdbc.Driver");
-//    conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/onebank","root","rupachazevn");
 //     stmt = conn.createStatement();
 //         ResultSet rs = stmt.executeQuery("select * from member_table");
 //         while(rs.next()){
