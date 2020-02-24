@@ -255,7 +255,7 @@ f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);
        
             try{
         Class.forName("com.mysql.jdbc.Driver");
-   conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/onebank","root","rupachazevn");
+   conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/onebank","root"," ");
     stmt = conn.createStatement();
       r = stmt.executeQuery("select * from member_table");
         while(r.next()){
@@ -312,7 +312,7 @@ f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);
                     String phone = tphone.getText();
                     String address = taddr.getText();
 
-                    conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/onebank","root","rupachazevn");
+                    conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/onebank","root"," ");
                   PreparedStatement stmt = conn.prepareStatement("INSERT INTO member_table values(?,?,?,?,?,?,?,?,?,?)");
                  stmt.setInt(1,0);
                   stmt.setString(2,name);
@@ -378,7 +378,7 @@ f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);
                     try{
                         
                         Class.forName("com.mysql.jdbc.Driver");
-                        conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/onebank","root","rupachazevn");
+                        conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/onebank","root"," ");
                          stmt = conn.createStatement();
                                 String sql_query = "SELECT * FROM member_table WHERE "+" account_no= "+getEmail;
                                ResultSet r1 = stmt.executeQuery(sql_query);
@@ -469,7 +469,7 @@ f.setDefaultCloseOperation(f.EXIT_ON_CLOSE);
             try{
                 shownoticeMoney.setVisible(false);
                     Class.forName("com.mysql.jdbc.Driver");
-                    conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/onebank","root","rupachazevn");
+                    conn = DriverManager.getConnection("jdbc:mysql://localhost:3307/onebank","root"," ");
                      stmt = conn.createStatement();
                      String sql_query = "SELECT * FROM member_table WHERE "+" account_no= "+getEmail;
                     ResultSet re = stmt.executeQuery(sql_query);
@@ -795,7 +795,7 @@ note.setForeground(Color.RED);
 
 
     public static void main(final String []args){
-   new Login();
+     new Login();
    //databaseConn();
 
 
